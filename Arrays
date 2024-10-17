@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Arrays {
+	public static void main(String[] args) {
+		int arr[]=new int[6];
+		int loc=0,val=0;
+		int max=5;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the elements: ");
+		for(int i=0;i<max;i++) {
+			arr[i]=sc.nextInt();
+		}
+		//inserting an element
+		System.out.println("enter the location: ");
+		loc=sc.nextInt();
+		System.out.println("enter the value: ");
+		val=sc.nextInt();
+		for(int i=max;i>loc;i--) {
+			arr[i]=arr[i-1];
+		}
+		arr[loc]=val;
+		for(int i=0;i<=max;i++) {
+			System.out.println("after inserting element: "+arr[i]);
+		}
+		//deleting an element
+		System.out.println("deleting an element: ");
+		loc=sc.nextInt();
+		for(int i=loc;i<max;i++) {
+			arr[i]=arr[i+1];
+		}
+		for(int i=0;i<max;i++) {
+			System.out.println("after deleting element: "+arr[i]);
+		}
+	}
+
+}
